@@ -10,6 +10,7 @@ set_link() {
 
     for f in $script_dir/.??*; do
         local file_name="$(basename $f)"
+	echo $HOME/$file_name
         if [ -e "$HOME/$file_name" ];then
             if [ ! -d "$HOME/backup_old_dotfiles" ];then
                 mkdir "$HOME/backup_old_dotfiles"
@@ -19,6 +20,7 @@ set_link() {
                 unlink "$HOME/$file_name"
             else
                 mv "$HOME/$file_name" "$HOME/backup_old_dotfiles"
+		ln -s $f $file_name
             fi
         else
             if [ $f != "$script_dir/.git" ];then
