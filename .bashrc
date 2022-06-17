@@ -10,20 +10,17 @@ alias e='exit'
 alias l='ls -al'
 alias lh='ls -alh'
 
-alias python='python3.6'
-alias pip='pip3'
-alias py='python3.6'
+alias py='python3.8'
 
 #git_alias
 alias g='git'
 alias ga='git add'
-alias gc='git clone'
+alias gp='git push'
+alias gc='git commit'
 
 #docker_alias
 alias d='docker'
-
-alias fwc='firewall-cmd'
-alias ipt='iptables'
+alias dc='docker-compose'
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
